@@ -1,20 +1,22 @@
 html {
+  box-sizing: border-box;
   font-size: 10px;
-  background-color: grey;  
 }
 
 body {
   margin: 0;
-  padding: 0;
+  padding: 20px;
+  max-width: 2400px;
+  max-height: 1600px;
   font-family: 'Times New Roman';
+  background-color: gainsboro;  
 }
 
 .keys {
+  margin: 20vh auto;
   display: flex;
-  min-height: 100vh;
-  min-width: 100vh;
   flex-flow: row wrap; 
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
 }
 
