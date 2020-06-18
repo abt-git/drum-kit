@@ -19,16 +19,18 @@ window.addEventListener('keydown', playSound);
 
 //_____________________________________________________________________________
 
-const button = document.querySelector(`.key`);
+let wrapper = document.querySelector('.keys');
 
-button.addEventListener("click", playClick);
+let selectedBt;
 
-function playClick(e) {
-    console.log(button);
-    const audio = document.querySelector(`audio[id="65"]`);
-    audio.currentTime = 0;
-    audio.play();
-    button.classList.add('playing');
+wrapper.onclick = function(event) {
+    let target = event.target.closest("div");
+    playClick(target);
+    console.log(target);    
 }
 
-
+function playClick(bt) {
+    bt.classList.add('playing');
+    const audio = document.querySelector(`audio[id="${bt.id}"]`);
+    audio.play();    
+}
