@@ -25,6 +25,7 @@ let selectedBt;
 
 wrapper.onclick = function(event) {
     let target = event.target.closest("div");
+    if (!target.classList.contains("key")) return;
     playClick(target);
     console.log(target);    
 }
